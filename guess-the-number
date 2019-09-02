@@ -1,0 +1,24 @@
+import random
+name=input("enter your name:")
+play='y'
+while(play=="y"):
+    e=0
+    c=0
+    range1=int(input("In what range do you want me to select a number?"))
+    num=random.randint(1,range1)
+    print("done!")
+    while(e==0):
+        print("make a guess")
+        guess = int(input())
+        c+=1
+        if(guess<num):
+            print("think big!!","try again")
+        elif(guess>num):
+            print("too big!!","try again")
+        else:
+            print("you got it right "+name)
+            print("you guessed it right in "+str(c)+" guesses")
+            e=1
+    print("do you want to play again?(y/n)")
+    play=input("")
+print("-----------------------------------")
